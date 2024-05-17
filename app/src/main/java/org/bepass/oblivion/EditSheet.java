@@ -27,7 +27,7 @@ public class EditSheet {
         this.context = context;
         fileManager = FileManager.getInstance(context);
 
-        this.title = "تغییر مقدار " + title;
+        this.title = "更改值 " + title;
         this.sharedPrefKey = sharedPrefKey;
 
         this.sheetsCallBack = sheetsCallBack;
