@@ -43,9 +43,9 @@ public class SettingsActivity extends AppCompatActivity {
 
         SheetsCallBack sheetsCallBack = this::settingBasicValuesFromSPF;
         // Listen to Changes
-        endpointLayout.setOnClickListener(v -> (new EditSheet(this, "اندپوینت", "endpoint", sheetsCallBack)).start());
-        portLayout.setOnClickListener(v -> (new EditSheet(this, "پورت", "port", sheetsCallBack)).start());
-        licenseLayout.setOnClickListener(v -> (new EditSheet(this, "لایسنس", "license", sheetsCallBack)).start());
+        endpointLayout.setOnClickListener(v -> (new EditSheet(this, "终点", "endpoint", sheetsCallBack)).start());
+        portLayout.setOnClickListener(v -> (new EditSheet(this, "端口", "port", sheetsCallBack)).start());
+        licenseLayout.setOnClickListener(v -> (new EditSheet(this, "证书", "license", sheetsCallBack)).start());
 
         adapter = ArrayAdapter.createFromResource(this, R.array.countries, R.layout.country_item_layout);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
