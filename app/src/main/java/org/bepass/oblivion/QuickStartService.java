@@ -70,7 +70,7 @@ public class QuickStartService extends TileService {
         }
 
         if (OblivionVpnService.prepare(this) != null) {
-            Toast.makeText(this, "لطفا یک‌بار از درون اپلیکیشن متصل شوید", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "重新连接", Toast.LENGTH_LONG).show();
             return;
         }
 
