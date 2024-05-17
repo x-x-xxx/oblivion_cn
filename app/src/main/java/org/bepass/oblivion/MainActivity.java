@@ -43,7 +43,7 @@ public class MainActivity extends ConnectionAwareBaseActivity {
                 } else {
                     if (backToast != null)
                         backToast.cancel(); // Cancel the existing toast to avoid stacking
-                    backToast = Toast.makeText(MainActivity.this, "برای خروج، دوباره بازگشت را فشار دهید.", Toast.LENGTH_SHORT);
+                    backToast = Toast.makeText(MainActivity.this, "To exit, press return again.", Toast.LENGTH_SHORT);
                     backToast.show();
                 }
                 backPressedTime = System.currentTimeMillis();
@@ -121,13 +121,13 @@ public class MainActivity extends ConnectionAwareBaseActivity {
         switch (state) {
             case DISCONNECTED:
                 publicIP.setVisibility(View.GONE);
-                stateText.setText("متصل نیستید");
+                stateText.setText("未连接");
                 ipProgressBar.setVisibility(View.GONE);
                 switchButton.setEnabled(true);
                 switchButton.setChecked(false, false);
                 break;
             case CONNECTING:
-                stateText.setText("در حال اتصال...");
+                stateText.setText("正在连接...");
                 publicIP.setVisibility(View.GONE);
                 ipProgressBar.setVisibility(View.VISIBLE);
                 switchButton.setChecked(true, false);
@@ -135,7 +135,7 @@ public class MainActivity extends ConnectionAwareBaseActivity {
                 break;
             case CONNECTED:
                 switchButton.setEnabled(true);
-                stateText.setText("اتصال برقرار شد");
+                stateText.setText("已连接");
                 switchButton.setChecked(true, false);
                 ipProgressBar.setVisibility(View.GONE);
                 pIPUtils.getIPDetails((details) -> {
